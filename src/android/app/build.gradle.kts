@@ -64,7 +64,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "dev.eden.eden_emulator"
+        applicationId = "com.eggns.emulator"
         minSdk = 24
         targetSdk = 36
         versionName = getGitVersion()
@@ -189,8 +189,8 @@ android {
             dimension = "version"
             isDefault = true
 
-            manifestPlaceholders += mapOf("appNameBase" to "Eden")
-            resValue("string", "app_name_suffixed", "Eden")
+            manifestPlaceholders += mapOf("appNameBase" to "Egg NS")
+            resValue("string", "app_name_suffixed", "Egg NS")
 
             ndk {
                 abiFilters += listOf("arm64-v8a")
@@ -199,8 +199,8 @@ android {
 
         create("genshinSpoof") {
             dimension = "version"
-            manifestPlaceholders += mapOf("appNameBase" to "Eden Optimized")
-            resValue("string", "app_name_suffixed", "Eden Optimized")
+            manifestPlaceholders += mapOf("appNameBase" to "Egg NS Optimized")
+            resValue("string", "app_name_suffixed", "Egg NS Optimized")
             applicationId = "com.miHoYo.Yuanshen"
 
             externalNativeBuild {
@@ -216,9 +216,9 @@ android {
 
         create("legacy") {
             dimension = "version"
-            manifestPlaceholders += mapOf("appNameBase" to "Eden Legacy")
-            resValue("string", "app_name_suffixed", "Eden Legacy")
-            applicationId = "dev.legacy.eden_emulator"
+            manifestPlaceholders += mapOf("appNameBase" to "Egg NS Legacy")
+            resValue("string", "app_name_suffixed", "Egg NS Legacy")
+            applicationId = "dev.legacy.Egg NS_emulator"
 
             externalNativeBuild {
                 cmake {
@@ -239,8 +239,8 @@ android {
 
         create("chromeOS") {
             dimension = "version"
-            manifestPlaceholders += mapOf("appNameBase" to "Eden ChromeOS")
-            resValue("string", "app_name_suffixed", "Eden ChromeOS")
+            manifestPlaceholders += mapOf("appNameBase" to "Egg NS ChromeOS")
+            resValue("string", "app_name_suffixed", "Egg NS ChromeOS")
 
             ndk {
                 abiFilters += listOf("x86_64")
@@ -262,12 +262,12 @@ android {
     }
 
     productFlavors.all {
-        val currentName = manifestPlaceholders["appNameBase"] as? String ?: "Eden"
+        val currentName = manifestPlaceholders["appNameBase"] as? String ?: "Egg NS"
         val suffix = if (isNightly) " Nightly" else ""
 
         // apply nightly suffix I/A
         resValue("string", "app_name_suffixed", "$currentName$suffix")
-        resValue("string", "app_name", "Eden$suffix")
+        resValue("string", "app_name", "Egg NS$suffix")
     }
 }
 

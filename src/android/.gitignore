@@ -4,6 +4,10 @@
 # Built application files
 *.apk
 *.ap_
+app/mainline/
+app/legacy/
+app/genshinSpoof/
+app/chromeOS/
 
 # Files for the ART/Dalvik VM
 *.dex
