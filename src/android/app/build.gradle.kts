@@ -33,7 +33,7 @@ val edenDir = project(":Eden").projectDir
 
 @Suppress("UnstableApiUsage")
 android {
-    namespace = "org.yuzu.yuzu_emu"
+    namespace = "com.eggns.emulator"
 
     compileSdkVersion = "android-36"
     ndkVersion = "28.2.13676358"
@@ -218,7 +218,7 @@ android {
             dimension = "version"
             manifestPlaceholders += mapOf("appNameBase" to "Egg NS Legacy")
             resValue("string", "app_name_suffixed", "Egg NS Legacy")
-            applicationId = "dev.legacy.Egg NS_emulator"
+            applicationId = "dev.legacy.eggnsemulator"
 
             externalNativeBuild {
                 cmake {
